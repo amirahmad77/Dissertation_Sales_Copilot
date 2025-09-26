@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Agent Co-Pilot Design System - Professional Sales Intelligence Platform
+All colors MUST be HSL for proper theming.
+*/
+
+@layer base {
+  :root {
+    /* Base Layout */
+    --background: 248 250% 99%;
+    --foreground: 215 28% 17%;
+
+    /* Cards & Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+    --card-hover: 214 32% 91%;
+
+    /* Sidebar Theme */
+    --sidebar-background: 215 28% 17%;
+    --sidebar-foreground: 214 32% 91%;
+    --sidebar-accent: 217 33% 23%;
+    --sidebar-accent-hover: 219 34% 28%;
+
+    /* Popover & Overlays */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+
+    /* Brand Colors - Professional Blue/Indigo */
+    --primary: 217 91% 60%;
+    --primary-hover: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary Actions */
+    --secondary: 214 32% 91%;
+    --secondary-hover: 213 27% 84%;
+    --secondary-foreground: 215 28% 17%;
+
+    /* Muted Elements */
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent Colors */
+    --accent: 214 32% 91%;
+    --accent-foreground: 215 28% 17%;
+
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --input-hover: 213 27% 84%;
+    --ring: 217 91% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(224 76% 48%));
+    --gradient-secondary: linear-gradient(135deg, hsl(214 32% 91%), hsl(213 27% 84%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(224 76% 48%) 50%, hsl(231 70% 42%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 28% 17% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 28% 17% / 0.1), 0 2px 4px -1px hsl(215 28% 17% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 28% 17% / 0.1), 0 4px 6px -2px hsl(215 28% 17% / 0.05);
+    --shadow-glow: 0 0 0 1px hsl(217 91% 60% / 0.1), 0 10px 25px hsl(217 91% 60% / 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark mode maintains professional appearance */
+    --background: 215 28% 17%;
+    --foreground: 214 32% 91%;
+
+    --card: 217 33% 23%;
+    --card-foreground: 214 32% 91%;
+    --card-hover: 219 34% 28%;
+
+    --sidebar-background: 215 25% 13%;
+    --sidebar-foreground: 214 32% 91%;
+    --sidebar-accent: 219 34% 28%;
+    --sidebar-accent-hover: 221 35% 33%;
+
+    --popover: 217 33% 23%;
+    --popover-foreground: 214 32% 91%;
+
+    --primary: 217 91% 60%;
+    --primary-hover: 217 91% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 219 34% 28%;
+    --secondary-hover: 221 35% 33%;
+    --secondary-foreground: 214 32% 91%;
+
+    --muted: 219 34% 28%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 219 34% 28%;
+    --accent-foreground: 214 32% 91%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 219 34% 28%;
+    --input: 219 34% 28%;
+    --input-hover: 221 35% 33%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

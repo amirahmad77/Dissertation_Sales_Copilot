@@ -1,0 +1,31 @@
+# A string used to distinguish different Supabase projects on the same host. Defaults to the  
+# working directory name when running `supabase init`.
+project_id = "gzltaweqmmeqxxcmbkix"
+
+[api]
+enabled = true
+# Port to use for the API URL.
+port = 54321
+# Schemas to expose in your API. Tables, views and stored procedures in this schema will get API
+# endpoints. public and storage are always included.
+schemas = ["public", "storage", "graphql_public"]
+# Extra schemas to add to the search_path of every request. public is always included.
+extra_search_path = ["public", "extensions"]
+# The maximum number of rows returns from a table or view. Limits payload size
+# for accidental or malicious requests.
+max_rows = 1000
+
+[functions.gemini-ocr]
+verify_jwt = false
+
+[functions.places-search]
+verify_jwt = false
+
+[functions.places-details]  
+verify_jwt = false
+
+[functions.send-contract-email]
+verify_jwt = false
+
+[functions.gemini-vision]
+verify_jwt = false
